@@ -12,8 +12,8 @@ require("dotenv").config({
  */
 
 module.exports = {
-  // pathPrefix: process.env.NODE_ENV === 'production' ? '/borderscape/' : '/',
-  pathPrefix: process.env.NODE_ENV === '/',
+  pathPrefix: process.env.NODE_ENV === 'production' ? '/borderscape/' : '/',
+  // pathPrefix: process.env.NODE_ENV === '/',
   siteMetadata: {
     title: `BORDERSCAPE`,
     description: `BORDERSCAPE | WebGIS: State Formation and Settlement Patterns in the Ancient Egyptian Southern Border, 4th-3rd millennia BCE`,
