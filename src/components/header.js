@@ -8,7 +8,7 @@ const HeaderSection = ({ siteTitle }) => (
   <Header>
     <Container>
       <div className="d-md-flex justify-content-around align-items-center text-center">
-        <Link to={withPrefix("/")}>
+        <Link to={"/"}>
           <div className="row">
             <div className="col-3">
               <StaticImage

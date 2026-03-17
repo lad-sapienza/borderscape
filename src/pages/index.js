@@ -12,7 +12,7 @@ const IndexPage = () => (
 
       <p>
         The BORDERSCAPE WebGIS databases and web app are outcomes of the{" "}
-        <a href="https://www.borderscapeproject.org/">
+        <a href="https://borderscapeproject.iksio.pan.pl/">
           BORDERSCAPE Project - Egyptian State Formation and the Changing
           Socio-Spatial Landscape of the Nile First Cataract Region in the 4th
           and 3rd millennia BCE
