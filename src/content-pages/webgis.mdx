@@ -1,0 +1,64 @@
+---
+title: "WebGIS"
+description: "The BORDERSCAPE WebGIS databases and web app are outcomes of the BORDERSCAPE Project - Egyptian State Formation and the Changing Socio-Spatial Landscape of the Nile First Cataract Region in the 4th and 3rd millennia BCE."
+---
+
+import { Row, Col } from "react-bootstrap"
+import OverviewMap from "../components/OverviewMap"
+import PhaseMap from "../components/PhaseMap"
+import { MACROTYPE_COLORS } from "../components/mapConfig"
+
+# The WebGIS
+
+## Sites by (macro-) typology
+
+---
+
+**Legend**
+
+<div className="d-flex flex-wrap map-legend">
+  {Object.entries(MACROTYPE_COLORS).map(([label, color]) => (
+    <div className="p-2" key={label}>
+      <span className="legend-swatch" style={{ backgroundColor: color }}></span>
+      <span>{label}</span>
+    </div>
+  ))}
+</div>
+
+---
+
+<OverviewMap client:only="react" />
+
+---
+
+## Sites by phase
+
+<Row>
+  <Col md={4}>
+    ### Phase 1
+    <PhaseMap phase={1} client:only="react" />
+  </Col>
+  <Col md={4}>
+    ### Phase 2
+    <PhaseMap phase={2} client:only="react" />
+  </Col>
+  <Col md={4}>
+    ### Phase 3
+    <PhaseMap phase={3} client:only="react" />
+  </Col>
+</Row>
+
+<Row>
+  <Col md={4}>
+    ### Phase 4
+    <PhaseMap phase={4} client:only="react" />
+  </Col>
+  <Col md={4}>
+    ### Phase 5
+    <PhaseMap phase={5} client:only="react" />
+  </Col>
+  <Col md={4}>
+    ### Phase 6
+    <PhaseMap phase={6} client:only="react" />
+  </Col>
+</Row>

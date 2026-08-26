@@ -1,0 +1,61 @@
+---
+import "../styles/global.scss";
+import SEO from "@lad-sapienza/scms-core/components/SEO/SEO.astro";
+import BSNavbar from "@lad-sapienza/scms-core/components/BSNavbar";
+import { siteMetadata } from "../user.config.mjs";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title, description } = Astro.props;
+
+const currentPath = Astro.url.pathname;
+const base = import.meta.env.BASE_URL;
+
+const menuItems = [
+  { href: base, label: "Home" },
+  { href: `${base}webgis/`, label: "WebGIS" },
+  { href: `${base}site-list/`, label: "Site List" },
+  { href: `${base}bibliography/`, label: "Bibliography" },
+  { href: `${base}credits/`, label: "Credits" },
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <SEO title={title} description={description} siteMetadata={siteMetadata} />
+    <link rel="icon" type="image/svg+xml" href={`${base}images/borderscape.svg`} />
+    <slot name="head" />
+  </head>
+
+  <body class="d-flex flex-column min-vh-100">
+    <BSNavbar
+      client:load
+      menuItems={menuItems}
+      currentPath={currentPath}
+      cssClasses={{
+        nav: "bg-body-tertiary",
+        ul: "me-auto mb-2 mb-md-0",
+        li: "text-center fw-medium",
+      }}
+      brand={{ text: siteMetadata.title, link: base }}
+    />
+
+    <Header />
+
+    <main class="flex-grow-1">
+      <div class="container">
+        <slot />
+      </div>
+    </main>
+
+    <Footer />
+  </body>
+</html>

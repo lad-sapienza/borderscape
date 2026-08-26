@@ -1,0 +1,50 @@
+// Here you can customize bootstrap
+$primary: #663399;
+@import "bootstrap/scss/bootstrap";
+
+:root {
+  --project-color: #ee8822;
+}
+
+.site-header {
+  background-color: var(--project-color);
+  color: #ffffff;
+  margin-bottom: 3rem;
+
+  a {
+    color: inherit;
+  }
+}
+
+.site-footer {
+  background-color: #ececec;
+  border-top: var(--project-color) solid 0.5rem;
+  margin-top: 3rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+  .heart {
+    color: #1963f7;
+  }
+}
+
+.site-carousel {
+  margin-bottom: 3rem;
+  border-bottom: var(--project-color) solid 0.3rem;
+
+  .carousel-caption {
+    background: rgba(0, 0, 0, 0.3);
+  }
+}
+
+.map-legend {
+  .legend-swatch {
+    width: 0.6em;
+    display: inline-block;
+    margin-right: 0.5rem;
+    position: relative;
+    vertical-align: middle;
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+  }
+}
