@@ -22,6 +22,7 @@ export default function PhaseMap({ phase, height = '400px' }: PhaseMapProps) {
     style: siteCircleStyle(MACROTYPE_COLORS[macrotype]),
     popupTemplate: SITE_POPUP_TEMPLATE_NO_MACROTYPE,
     visible: true,
+    fitToContent: true,
     filter: (f: any) =>
       f.properties[`Phase ${phase}`] === '1' && f.properties.Macrotype === macrotype,
   }));
