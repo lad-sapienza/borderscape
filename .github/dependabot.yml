@@ -1,3 +1,4 @@
+# Checked weekly by Dependabot; see the Automatic Updates guide in the s:CMS docs.
 version: 2
 updates:
   - package-ecosystem: npm
